@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorSecondary"
+         android:id="@+id/clfondoPrincipalChequeo"
+    tools:context="com.crystal.mulerosCEDI.ui.ChequeoActivity">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:animateLayoutChanges="true"
+            android:background="@color/colorPrimary"
+            android:layout_marginStart="4sp"
+            android:layout_marginEnd="4sp"
+            app:cardCornerRadius="10sp"
+            app:cardElevation="4dp"
+            app:cardUseCompatPadding="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="MissingConstraints">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:animateLayoutChanges="true"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/rlFondo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="6dp">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/tilCaja"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="2dp"
+                            android:layout_marginStart="4sp"
+                            android:layout_marginTop="1dp"
+                            android:layout_marginEnd="4sp"
+                            android:hint="Caja"
+                            android:enabled="true"
+                            android:textColorHint="@color/black"
+                            app:boxStrokeColor="@color/colorPrimary"
+                            app:counterTextColor="@color/white"
+                            app:hintTextColor="@color/black"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/etCaja"
+                                android:layout_width="match_parent"
+                                android:layout_height="54dp"
+                                android:layout_marginBottom="8dp"
+                                android:backgroundTint="@color/white"
+                                android:ems="10"
+                                android:gravity="center"
+                                android:focusable="true"
+                                android:imeActionLabel="Enviar"
+                                android:imeOptions="actionGo"
+                                android:inputType="text"
+                                android:textColor="@color/black"
+                                android:textColorHint="@color/white"
+                                android:textSize="20sp"
+                                app:layout_constraintBottom_toBottomOf="@+id/tilCaja"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="@+id/tilCaja" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/tilSku"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="4sp"
+                            android:layout_marginTop="2dp"
+                            android:layout_marginEnd="4sp"
+                            android:enabled="false"
+                            android:hint="Sku"
+                            android:textColorHint="@color/black"
+                            app:boxStrokeColor="@color/colorPrimary"
+                            app:counterTextColor="@color/white"
+                            app:hintTextColor="@color/black"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/tilCaja"
+                            app:startIconDrawable="@drawable/vector_camara">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/etSku"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="8dp"
+                                android:backgroundTint="@color/white"
+                                android:ems="10"
+                                android:imeActionLabel="Enviar"
+                                android:imeOptions="actionGo"
+                                android:inputType="number"
+                                android:textColor="@color/black"
+                                android:textColorHint="@color/white"
+                                android:textSize="18sp"
+                                app:layout_constraintBottom_toBottomOf="@+id/tilCaja"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="@+id/tilCaja" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/tilCantidad"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="4sp"
+                            android:layout_marginTop="2dp"
+                            android:layout_marginEnd="4sp"
+                            android:enabled="false"
+                            android:hint="Cantidad"
+                            android:textColorHint="@color/black"
+                            app:boxStrokeColor="@color/colorPrimary"
+                            app:counterTextColor="@color/white"
+                            app:hintTextColor="@color/black"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/tilSku"
+                            app:startIconDrawable="@drawable/vector_mensaje">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/etCantidad"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="8dp"
+                                android:backgroundTint="@color/white"
+
+                                android:ems="10"
+                                android:imeOptions="actionSearch"
+                                android:inputType="number"
+                                android:textColor="@color/black"
+                                android:textColorHint="@color/white"
+                                android:textSize="18sp"
+                                app:layout_constraintBottom_toBottomOf="@+id/tilCantidad"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="@+id/tilCantidad" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/tilSkuFinal"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:layout_marginStart="4sp"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginEnd="4sp"
+                            android:hint="Sku"
+                            android:textColorHint="@color/black"
+                            app:boxStrokeColor="@color/colorPrimary"
+                            app:counterTextColor="@color/white"
+                            app:hintTextColor="@color/black"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/tilCantidad">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/etSkuParteInferior"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="8dp"
+                                android:backgroundTint="@color/white"
+                                android:ems="10"
+                                android:enabled="false"
+                                android:imeOptions="actionSearch"
+                                android:gravity="center"
+                                android:inputType="text"
+                                android:textColor="@color/black"
+                                android:textColorHint="@color/white"
+                                android:textSize="20sp"
+                                app:layout_constraintBottom_toBottomOf="@+id/tilSkuFinal"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="@+id/tilSkuFinal" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/tilSource"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="4sp"
+                            android:layout_marginTop="2dp"
+                            android:layout_marginEnd="4sp"
+                            android:enabled="false"
+                            android:hint="Source"
+                            android:textColorHint="@color/black"
+                            app:boxStrokeColor="@color/colorPrimary"
+                            app:counterTextColor="@color/white"
+                            app:hintTextColor="@color/black"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/tilSkuFinal"
+                            app:startIconDrawable="@drawable/vector_equipo">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/etSource"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="8dp"
+                                android:backgroundTint="@color/white"
+                                android:ems="10"
+                                android:imeOptions="actionSearch"
+                                android:inputType="number"
+                                android:textColor="@color/black"
+                                android:textColorHint="@color/white"
+                                android:textSize="18sp"
+                                app:layout_constraintBottom_toBottomOf="@+id/tilSource"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="@+id/tilSource" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/tilBtnAtras"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="4sp"
+                            android:layout_marginTop="2dp"
+                            android:layout_marginEnd="4sp"
+                            android:enabled="false"
+
+                            android:textColorHint="@color/black"
+                            app:boxStrokeColor="@color/colorPrimary"
+                            app:counterTextColor="@color/white"
+                            app:hintTextColor="@color/black"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.0"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/tilSource"/>
+
+                        <Button
+                            android:id="@+id/btnAtras"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="@color/white"
+                            android:ems="10"
+                            android:imeOptions="actionSearch"
+                            android:text="Atras"
+                            android:textColor="@color/black"
+                            android:textColorHint="@color/white"
+                            android:textSize="18sp"
+                            app:layout_constraintBottom_toBottomOf="@+id/tilBtnAtras"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="@+id/tilBtnAtras" />
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
